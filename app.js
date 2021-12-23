@@ -14,3 +14,4 @@ const player = {
 
 console.log(player.name);
 player.sayHello("lynn");
+// push
