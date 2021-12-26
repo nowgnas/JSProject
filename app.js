@@ -1,17 +1,9 @@
-function hello(nameOfPerson, age) {
-  console.log("hello my name is " + nameOfPerson);
-  console.log("my age is " + age);
+const age = 96;
+
+function calculateKrage(ageOfForeigner) {
+  return ageOfForeigner + 2;
 }
 
-hello("lee", 20);
+const krAge = calculateKrage(age);
 
-const player = {
-  name: "nico",
-  sayHello: function (otherPersonsName) {
-    console.log("hello " + otherPersonsName);
-  },
-};
-
-console.log(player.name);
-player.sayHello("lynn");
-// push
+console.log(krAge);
