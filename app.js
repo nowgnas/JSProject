@@ -1,31 +1,15 @@
-const title = document.querySelector("div.hello:first-child h1");
+const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-  title.style.color = "blue";
+  const currentColor = h1.style.color;
+  let newColor;
+
+  if (currentColor === "blue") {
+    newColor = "tomato";
+  } else {
+    newColor = "blue";
+  }
+  h1.style.color = newColor;
 }
 
-function handleMousEnter() {
-  title.innerText = "mouse is here";
-}
-
-function handleMouseLeave() {
-  title.innerText = "mouse is gone";
-}
-
-function handleWindowResize() {
-  document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-  alert("copier");
-}
-
-function handleWindwoOffline() {
-  alert("no wifi");
-}
-
-title.addEventListener("click", handleTitleClick);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindwoOffline);
+h1.addEventListener("click", handleTitleClick);
